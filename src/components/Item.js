@@ -1,11 +1,15 @@
 import React from "react";
 
 function Item({ name, category }) {
+
+  function handleClick(e){
+    e.target.parentNode.className="in-cart"  
+  }
   return (
     <li className="">
       <span>{name}</span>
       <span className="category">{category}</span>
-      <button className="add">Add to Cart</button>
+      <button onClick={handleClick} className="add">Add to Cart</button>
     </li>
   );
 }
